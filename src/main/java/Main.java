@@ -4,22 +4,24 @@ import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
-        race.cars();
-        System.out.println("Победитель гонки: " + race.winner());
+        Race.cars();
+        System.out.println("Победитель гонки: " + Race.winner());
     }
 }
 
 class Car {
     String name;
     int speed;
+
     Car(String name, int speed) {
         this.name = name;
         this.speed = speed;
     }
 }
 
-class race {
+class Race {
     static ArrayList<Car> carList;
+
     static void cars() {
         carList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -49,6 +51,7 @@ class race {
         }
 
     }
+
     static String winner() {
         String raceWinner;
 
